@@ -1,0 +1,415 @@
+2023-01-20 19:50:49,049:INFO:Initializing load_model()
+2023-01-20 19:50:49,049:INFO:load_model(model_name=modelo_regressao_insurance_charges, platform=None, authentication=None, verbose=True)
+2023-01-20 19:50:50,258:INFO:Initializing load_model()
+2023-01-20 19:50:50,258:INFO:load_model(model_name=modelo_regressao_insurance_charges, platform=None, authentication=None, verbose=True)
+2023-01-20 19:50:50,314:INFO:Initializing predict_model()
+2023-01-20 19:50:50,314:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='regression',
+                                      target='charges')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    target=...
+                ('fix_perfect', Remove_100(target='charges')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 RandomForestRegressor(criterion='mae', max_depth=5,
+                                       max_features=1.0,
+                                       min_impurity_decrease=0.4,
+                                       min_samples_leaf=2, min_samples_split=5,
+                                       n_estimators=230, n_jobs=-1,
+                                       random_state=884)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:50:50,315:INFO:Checking exceptions
+2023-01-20 19:50:50,316:INFO:Preloading libraries
+2023-01-20 19:50:51,884:INFO:Initializing load_model()
+2023-01-20 19:50:51,885:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:50:52,917:INFO:Initializing load_model()
+2023-01-20 19:50:52,918:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:50:52,978:INFO:Initializing predict_model()
+2023-01-20 19:50:52,978:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:50:52,979:INFO:Checking exceptions
+2023-01-20 19:50:52,979:INFO:Preloading libraries
+2023-01-20 19:51:39,292:INFO:Initializing load_model()
+2023-01-20 19:51:39,293:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:51:39,371:INFO:Initializing predict_model()
+2023-01-20 19:51:39,371:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:51:39,372:INFO:Checking exceptions
+2023-01-20 19:51:39,372:INFO:Preloading libraries
+2023-01-20 19:51:44,445:INFO:Initializing load_model()
+2023-01-20 19:51:44,445:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:51:45,065:INFO:Initializing load_model()
+2023-01-20 19:51:45,066:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:51:45,132:INFO:Initializing predict_model()
+2023-01-20 19:51:45,133:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:51:45,133:INFO:Checking exceptions
+2023-01-20 19:51:45,133:INFO:Preloading libraries
+2023-01-20 19:52:04,276:INFO:Initializing load_model()
+2023-01-20 19:52:04,277:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:52:04,365:INFO:Initializing predict_model()
+2023-01-20 19:52:04,365:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:52:04,366:INFO:Checking exceptions
+2023-01-20 19:52:04,366:INFO:Preloading libraries
+2023-01-20 19:52:07,188:INFO:Initializing load_model()
+2023-01-20 19:52:07,189:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:52:07,258:INFO:Initializing predict_model()
+2023-01-20 19:52:07,259:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:52:07,259:INFO:Checking exceptions
+2023-01-20 19:52:07,259:INFO:Preloading libraries
+2023-01-20 19:52:38,200:INFO:Initializing load_model()
+2023-01-20 19:52:38,201:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:52:38,268:INFO:Initializing predict_model()
+2023-01-20 19:52:38,268:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:52:38,268:INFO:Checking exceptions
+2023-01-20 19:52:38,269:INFO:Preloading libraries
+2023-01-20 19:53:08,045:INFO:Initializing load_model()
+2023-01-20 19:53:08,045:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:08,493:INFO:Initializing load_model()
+2023-01-20 19:53:08,494:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:08,567:INFO:Initializing predict_model()
+2023-01-20 19:53:08,567:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:53:08,567:INFO:Checking exceptions
+2023-01-20 19:53:08,568:INFO:Preloading libraries
+2023-01-20 19:53:11,972:INFO:Initializing load_model()
+2023-01-20 19:53:11,974:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:13,173:INFO:Initializing load_model()
+2023-01-20 19:53:13,176:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:13,240:INFO:Initializing predict_model()
+2023-01-20 19:53:13,240:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:53:13,241:INFO:Checking exceptions
+2023-01-20 19:53:13,242:INFO:Preloading libraries
+2023-01-20 19:53:40,298:INFO:Initializing load_model()
+2023-01-20 19:53:40,299:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:40,352:INFO:Initializing predict_model()
+2023-01-20 19:53:40,352:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:53:40,353:INFO:Checking exceptions
+2023-01-20 19:53:40,353:INFO:Preloading libraries
+2023-01-20 19:53:56,292:INFO:Initializing load_model()
+2023-01-20 19:53:56,293:INFO:load_model(model_name=modelo_regressao_insurance_charges, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:57,281:INFO:Initializing load_model()
+2023-01-20 19:53:57,283:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:58,485:INFO:Initializing load_model()
+2023-01-20 19:53:58,486:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:53:58,549:INFO:Initializing predict_model()
+2023-01-20 19:53:58,549:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:53:58,550:INFO:Checking exceptions
+2023-01-20 19:53:58,551:INFO:Preloading libraries
+2023-01-20 19:54:58,978:INFO:Initializing load_model()
+2023-01-20 19:54:58,979:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:54:59,051:INFO:Initializing predict_model()
+2023-01-20 19:54:59,051:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:54:59,051:INFO:Checking exceptions
+2023-01-20 19:54:59,052:INFO:Preloading libraries
+2023-01-20 19:55:40,286:INFO:Initializing load_model()
+2023-01-20 19:55:40,288:INFO:load_model(model_name=modelo_classificacao_insurance_smoker, platform=None, authentication=None, verbose=True)
+2023-01-20 19:55:40,349:INFO:Initializing predict_model()
+2023-01-20 19:55:40,349:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(ml_usecase='classification',
+                                      target='smoker')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacement_strategy='least '
+                                                                         'frequent',
+                                                    targ...
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 StackingClassifier(cv=5,
+                                    estimators=[('gbc',
+                                                 GradientBoostingClassifier(random_state=1187)),
+                                                ('lightgbm',
+                                                 LGBMClassifier(random_state=1187)),
+                                                ('dt',
+                                                 DecisionTreeClassifier(random_state=1187))],
+                                    final_estimator=LogisticRegression(max_iter=1000,
+                                                                       random_state=1187),
+                                    n_jobs=-1, passthrough=True)]]), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2023-01-20 19:55:40,349:INFO:Checking exceptions
+2023-01-20 19:55:40,349:INFO:Preloading libraries
