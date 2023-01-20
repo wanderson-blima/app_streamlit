@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pycaret.regression import predict_model, load_model
+import joblib
 
 paginas = ['Home', 'Widgets Streamlit', 'Modelo Custos', 'Modelo Fumante', 'Modelo Churn']
 
@@ -89,11 +89,11 @@ if pagina == 'Modelo Custos':
 
     st.markdown('---')
 
-    modelo = load_model('modelo_regressao_insurance_charges')
+    modelo = joblib.load('modelo_regressao_insurance_charges.pkl')
 
     if st.button('Executar Modelo'):
-        pred = float(predict_model(modelo, data = dados)['Label'].round(2))
-        saida = f'O previsto para o Custo de Seguro é de $ {pred:.2f}'
+        pred = float(modelo.predict(dados)[0].round(2))
+        saida = f'O previsto para o Custo de Seguro é de $ {pred}'
         st.subheader(saida)
 
 
@@ -114,14 +114,13 @@ if pagina == 'Modelo Fumante':
 
     st.markdown('---')
 
-    modelo = load_model('modelo_classificacao_insurance_smoker')
+    modelo = joblib.load('modelo_classificacao_insurance_smoker.pkl')
 
     if st.button('Executar Modelo'):
-        pred = int(predict_model(modelo, data = dados)['Label'])
+        pred = int(modelo.predict(dados)[0])
         saida = 'Ele não é fumante' if pred == 0 else 'É um possível fumante'
         st.write(saida)
 
 
 if pagina == 'Modelo Churn':
     st.title('Modelos de Churn Bancário')
-

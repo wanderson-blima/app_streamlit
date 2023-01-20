@@ -11,4 +11,4 @@ python-dotenv>=0.5.1
 streamlit==1.17.0
 pandas==1.5.3
 numpy==1.20.3
-pycaret==2.3.10
+joblib==1.2.0
