@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#from pycaret.regression import predict_model, load_model
+from pycaret.regression import predict_model, load_model
 
 
 #paginas = ['Home', 'Widgets Streamlit', 'Modelo Custos', 'Modelo Fumante', 'Modelo Churn']
