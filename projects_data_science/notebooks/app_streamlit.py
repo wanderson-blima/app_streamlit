@@ -2,19 +2,16 @@ import streamlit as st
 import pandas as pd
 from pycaret.regression import predict_model, load_model
 
+paginas = ['Home', 'Widgets Streamlit', 'Modelo Custos', 'Modelo Fumante', 'Modelo Churn']
 
-#paginas = ['Home', 'Widgets Streamlit', 'Modelo Custos', 'Modelo Fumante', 'Modelo Churn']
-
-#pagina = st.sidebar.radio('Navegue por aqui', paginas)
-
-tab1, tab2, tab3, tab4, tab5 = st.tabs(['Home', 'Widgets Streamlit', 'Modelo Custos', 'Modelo Fumante', 'Modelo Churn'])
+pagina = st.sidebar.radio('Navegue por aqui', paginas)
 
 
-with tab1:
+if pagina == 'Home':
     st.title('Meus Modelos em Produção :gem:')
     st.write('Navegue pelo meno na barra lateral para escolher entre os modelos disponíveis nessa aplicação WEB')
 
-with tab2:
+if pagina == 'Widgets Streamlit':
     st.title('Principais Widgets Interativos do Streamlit')
 
     st.markdown('## Botões')
@@ -75,8 +72,7 @@ with tab2:
         st.write(f'**Número selecionado: {input_numero}**')
 
 
-
-with tab3:
+if pagina == 'Modelo Custos':
     st.title('Modelo para Previsão de Custos de Seguro')
 
     idade = st.number_input('Idade', 18, 65, 30)
@@ -91,13 +87,41 @@ with tab3:
     dados0 = {'age': [idade], 'sex': [sexo_modelo], 'bmi': [imc], 'children': [criancas], 'smoker': [fumante], 'region': [regiao]}
     dados = pd.DataFrame(dados0)
 
-    if st.button('Executar Modelo'):
-        st.write(f'modelo executado: {dados0}')
+    st.markdown('---')
 
-with tab4:
+    modelo = load_model('modelo_regressao_insurance_charges')
+
+    if st.button('Executar Modelo'):
+        pred = float(predict_model(modelo, data = dados)['Label'].round(2))
+        saida = f'O previsto para o Custo de Seguro é de $ {pred:.2f}'
+        st.subheader(saida)
+
+
+if pagina == 'Modelo Fumante':
     st.title('Modelos para Previsão de Possíveis Fraudadores')
 
+    idade = st.number_input('Idade', 18, 65, 30)
+    imc = st.number_input('Índice de Massa Corporal', 15, 54, 24)
+    custos = st.slider('Informe o Custo do Seguro', 1000, 50000, 10000, 1000)
+    regiao = st.selectbox('Em que região mora?', ['southeast', 'southwest', 'northeast', 'northwest'])
+    sexo = st.selectbox('Sexo', ['Masculino', 'Feminino'])
+    criancas = st.selectbox('Quantidade de dependentes', [0, 1, 2, 3, 4, 5])
 
-with tab5:
+    sexo_modelo = 'male' if sexo == 'Masculino' else 'famale'
+
+    dados0 = {'age': [idade], 'sex': [sexo_modelo], 'bmi': [imc], 'children': [criancas], 'charges': [custos], 'region': [regiao]}
+    dados = pd.DataFrame(dados0)
+
+    st.markdown('---')
+
+    modelo = load_model('modelo_classificacao_insurance_smoker')
+
+    if st.button('Executar Modelo'):
+        pred = int(predict_model(modelo, data = dados)['Label'])
+        saida = 'Ele não é fumante' if pred == 0 else 'É um possível fumante'
+        st.write(saida)
+
+
+if pagina == 'Modelo Churn':
     st.title('Modelos de Churn Bancário')
 
